@@ -1,0 +1,31 @@
+<!-- main app container -->
+<div>
+    <div>
+        <h1>Angular 14 - Modal Popup Example</h1>
+        <p>{{bodyText}}</p>
+        <button (click)="modalService.open('modal-1')">Open Modal 1</button>
+        <button (click)="modalService.open('modal-2')">Open Modal 2</button>
+    </div>
+    
+    <jw-modal id="modal-1">
+        <h1>A custom modal popup</h1>
+        <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
+        <button (click)="modalService.close();">Close</button>
+    </jw-modal>
+    
+    <jw-modal id="modal-2">
+        <h1>A tall modal popup</h1>
+        <p style="padding-bottom: 1500px;">Close with the button below or by clicking the background.</p>
+        <button (click)="modalService.close();">Close</button>
+    </jw-modal>
+</div>
+
+<!-- credits -->
+<div class="credits">
+    <p>
+        <a href="#" target="_top">Angular 14 - Modal Popup (Dialog) Tutorial with Example</a>
+    </p>
+    <p>
+        <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+    </p>
+</div>
